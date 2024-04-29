@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<!-- імпортуємо код з іншого html документу -->
+	<!-- передаємо йому змінну title, яка може бути різною для кожної сторінки -->
+	@@include('html/head.html',{ "title":"Avantaj - Вантажні перевезення" })
+	<body>
+		<div class="wrapper">
+			@@include('html/header.html',{})
+			<main class="main">
+				<section class="hero" id="hero">
+					<article class="hero__background hero__container">
+						<div class="hero__content">
+							<div class="hero__description">
+								<h1 class="hero__title">Вантажні перевезення</h1>
+								<p class="hero__subtitle">
+									Ми не просто ваш провідник в світі доставки, ми - ваш надійний партнер у
+									будівництві майбутнього.
+								</p>
+								<button id="btnCall" type="button" class="hero__button button2">
+									Дізнатись вартість
+								</button>
+							</div>
+							<article class="hero__stats">
+								<p class="hero__stat-item">
+									<spam class="hero__stat-number">+10</spam>
+									<spam class="hero__stat-description">років<br />досвіду</spam>
+								</p>
+								<p class="hero__stat-item">
+									<spam class="hero__stat-number">+100</spam>
+									<spam class="hero__stat-description">Задоволених<br />клієнтів</spam>
+								</p>
+								<p class="hero__stat-item">
+									<spam class="hero__stat-number">+1000</spam>
+									<spam class="hero__stat-description">Виконаних<br />доставок</spam>
+								</p>
+							</article>
+						</div>
+					</article>
+					<!-- <article class="hero__map"></article> -->
+					<article class="hero__media media"></article>
+				</section>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			</main>
+			@@include('html/footer.html',{})
+		</div>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
