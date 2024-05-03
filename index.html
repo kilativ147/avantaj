@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<!-- імпортуємо код з іншого html документу -->
+	<!-- передаємо йому змінну title, яка може бути різною для кожної сторінки -->
+	@@include('html/head.html',{ "title":"Avantaj - Вантажні перевезення" })
+	<body>
+		<div class="wrapper">
+			@@include('html/header.html',{})
+			<main class="main">
+				<section id="hero" class="hero">
+					<div class="hero__container">
+						<article class="hero__background">
+							<div class="hero__content">
+								<div class="hero__description">
+									<h1 class="hero__title">Вантажні перевезення</h1>
+									<p class="hero__subtitle">
+										Ми не просто ваш провідник в світі доставки, ми - ваш надійний партнер у
+										будівництві майбутнього.
+									</p>
+									<button id="btnCall" type="button" class="hero__button button2">
+										Дізнатись вартість
+									</button>
+								</div>
+								<article class="hero__stats">
+									<p class="hero__stat-item">
+										<spam class="hero__stat-number">+10</spam>
+										<spam class="hero__stat-description">років<br />досвіду</spam>
+									</p>
+									<p class="hero__stat-item">
+										<spam class="hero__stat-number">+100</spam>
+										<spam class="hero__stat-description">Задоволених<br />клієнтів</spam>
+									</p>
+									<p class="hero__stat-item">
+										<spam class="hero__stat-number">+1000</spam>
+										<spam class="hero__stat-description">Виконаних<br />доставок</spam>
+									</p>
+								</article>
+							</div>
+						</article>
+						<a class="hero__media media__container media">
+							<a href="#!" class="media__link">
+								<img src="@img/icons/icons.svg#vb-active" alt="Viber" />
+							</a>
+							<a href="#!" class="media__link">
+								<img src="@img/icons/icons.svg#tg-active" alt="Telegram" />
+							</a>
+							<a href="#!" class="media__link">
+								<img src="@img/icons/icons.svg#wu-active" alt="Whatsup" />
+							</a>
+							<a href="#!" class="media__link">
+								<img src="@img/icons/icons.svg#fb-active" alt="Facebook" />
+							</a>
+							<a href="#!" class="media__link">
+								<img src="@img/icons/icons.svg#inst-active" alt="Instagram" />
+							</a>
+						</a>
+					</div>
+				</section>
+				<section id="about" class=" about about__container">
+					<h2 class="about__title">Про нас</h2>
+					<div class="about__content">
+						<div class="about__image"></div>
+						<div class="about__description">
+							<div class="about__text">
+								<p class="about__paragrahp">
+									Наша команда має багаторічний досвід в галузі доставки, забезпечуючи високий
+									рівень професіоналізму та надійності в Одеській області.
+								</p>
+								<p class="about__paragrahp">
+									Ми допоможемо вам перевезти вантаж важкістю від 3 до 18 т., завантажити та
+									розвантажити в потрібному місці по всій Одеській області.
+								</p>
+								<p class="about__paragrahp">
+									Ми працюєм над тим, щоб ваш вантаж був доставлений найоптимальнішим маршрутом з
+									мінімальними витратами. Дізнатись вартість наших послуг можна,зателефонувавши нам,
+									або заповніть форму нижче і ми вам перетелефонуємо.
+								</p>
+							</div>
+							<button class="about__button button2">Зателефонувати</button>
+						</div>
+					</div>
+				</section>
+				<section id="services" class=" services services__container">
+					<h2 class="services__title">Послуги</h2>
+					<div class="services__content">
+						<ul class="services__list">
+							<li class="services__item">
+								<h3 class="services__service-name">Вантажні перевезення</h3>
+								<img
+									src="@img/services-1.webp"
+									alt="Вантажні перевезення"
+									class="services__service-image"
+								/>
+								<div class="services__service-description">
+									<span class="services__service-number">#1</span
+									><span class="services__service-text"
+										>Доставимо вантажі в будь-який куток Одеської області</span
+									>
+								</div>
+							</li>
+							<li class="services__item">
+								<h3 class="services__service-name">Вантажні послуги</h3>
+								<img
+									src="@img/services-2.webp"
+									alt="Вантажні послуги"
+									class="services__service-image"
+								/>
+								<div class="services__service-description">
+									<span class="services__service-number">#2</span
+									><span class="services__service-text"
+										>Завантажимо , розвантажимо будь-якої важкості вантаж
+									</span>
+								</div>
+							</li>
+							<li class="services__item">
+								<h3 class="services__service-name">Вивіз сміття</h3>
+								<img
+									src="@img/services-3.webp"
+									alt="Вивіз сміття"
+									class="services__service-image"
+								/>
+								<div class="services__service-description">
+									<span class="services__service-number">#3</span
+									><span class="services__service-text"
+										>Винесемо та вивеземо сміття після ремонту в вашій оселі</span
+									>
+								</div>
+							</li>
+							<li class="services__item">
+								<h3 class="services__service-name">Допомога з переїздом</h3>
+								<img
+									src="@img/services-4.webp"
+									alt="Допомога з переїздом"
+									class="services__service-image"
+								/>
+								<div class="services__service-description">
+									<span class="services__service-number">#4</span
+									><span class="services__service-text"
+										>Винесем , перевезем , занесем ваші речі з одієї оселі в іншу</span
+									>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section id="contact" class=" contact contact__container">
+					<h2 class="contact__title">Контакти</h2>
+					<div class="contact__content">
+						<article class="contact__feedback">
+							<form action="" class="contact__form form">
+								<h4 class="form__title">Зворотній зв'язок</h4>
+								<p class="form__subtitle">Введіть свої контакти і ми Вам зателефонуємо</p>
+								<label for="inputName" class="form__label">
+									<span class="form__label-name">Ім'я</span>
+									<input
+										type="text"
+										id="inputName"
+										name="userName"
+										placeholder="Ваше ім'я"
+										class="form__input"
+									/>
+								</label>
+								<label for="inputPhone" class="form__label">
+									<span class="form__label-name">Номер телефону</span>
+									<input
+										type="phone"
+										id="inputPhone"
+										name="userName"
+										placeholder="+380..."
+										class="form__input"
+									/>
+								</label>
+								<button class="form__button button1">Відправити</button>
+							</form>
+						</article>
+						<article class="contact__contacts contacts">
+							<div class="contacts__list">
+								<h3 class="contact__address">м. Одеса</h3>
+								<a href="tel:+380957791211" class="contacts__phone">+380957791211</a>
+								<a href="tel:+380972251506" class="contacts__phone">+380972251506</a>
+								<a href="mailto:lu4kov.vaha@gmail.com" class="contacts__email"
+									>lu4kov.vaha@gmail.com
+								</a>
+								<article class="contact__media media">
+									<a href="#!" class="media__link">
+										<img src="@img/icons/icons.svg#vb-active" alt="Viber" />
+									</a>
+									<a href="#!" class="media__link">
+										<img src="@img/icons/icons.svg#tg-active" alt="Telegram" />
+									</a>
+									<a href="#!" class="media__link">
+										<img src="@img/icons/icons.svg#wu-active" alt="Whatsup" />
+									</a>
+									<a href="#!" class="media__link">
+										<img src="@img/icons/icons.svg#fb-active" alt="Facebook" />
+									</a>
+									<a href="#!" class="media__link">
+										<img src="@img/icons/icons.svg#inst-active" alt="Instagram" />
+									</a>
+								</article>
+							</div>
+						</article>
+					</div>
+				</section>
+				<section id="cars" class="  cars cars__container">
+					<div class="cars__text">
+						<h2 class="cars__title">Наші Автомобілі</h2>
+						<p class="cars__description">
+							Великий парк транспорту. Від невеликих вантажівок до великовантажних тягачів.
+						</p>
+					</div>
+					<article class="cars__content swiper">
+						<ul class="cars__list swiper-wrapper">
+							<li class="cars__item swiper-slide">
+								<img src="@img/auto-3t-1.webp" alt="" class="cars__item-img" />
+								<p class="cars__item-text">Вантаж до 3 т.</p>
+							</li>
+							<li class="cars__item swiper-slide">
+								<img src="@img/auto-3t-2.webp" alt="" class="cars__item-img" />
+								<p class="cars__item-text">Вантаж до 3 т.</p>
+							</li>
+							<li class="cars__item swiper-slide">
+								<img src="@img/auto-5t-1.webp" alt="" class="cars__item-img" />
+								<p class="cars__item-text">Вантаж до 5 т.</p>
+							</li>
+							<li class="cars__item swiper-slide">
+								<img src="@img/auto-5t-2.webp" alt="" class="cars__item-img" />
+								<p class="cars__item-text">Вантаж до 5 т.</p>
+							</li>
+							<li class="cars__item swiper-slide">
+								<img src="@img/auto-10t-1.webp" alt="" class="cars__item-img" />
+								<p class="cars__item-text">Вантаж до 10 т. + причеп 8 т.</p>
+							</li>
+							<li class="cars__item swiper-slide">
+								<img src="@img/auto-10t-2.webp" alt="" class="cars__item-img" />
+								<p class="cars__item-text">Вантаж до 10 т. + причеп 8 т.</p>
+							</li>
+						</ul>
+						<div class="cars__buttons">
+							<button type="button" class="cars__button cars__button-prev"></button
+							><button type="button" class="cars__button cars__button-next"></button>
+						</div>
+					</article>
+				</section>
+				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+			</main>
+			@@include('html/footer.html',{})
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>

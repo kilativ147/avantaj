@@ -1,0 +1,77 @@
+$screen1280: 1279.98px;
+$screen1024: 1023.98px;
+$screen800: 799.98px;
+$screen768: 767.98px;
+$screen390: 389.98px;
+$screen360: 359.98px;
+
+$container_maxWidth: 76.5125rem;
+
+$text-color-black: #363333;
+$text-color-white: #fcfcfc;
+$text-color-green: #319e3c;
+$button-color-normal: #319e3c;
+$button-color-hover: #24d035;
+$button-color-active: #078914;
+$button-color-disable: #d0d5d0;
+$main-color-white: #fcfcfc;
+$main-color-green: #319e3c;
+$main-color-black: #363333;
+
+@mixin text-h1 {
+	font: 400 4.8932rem/150% 'Kurale', sans-serif;
+	color: $text-color-black;
+}
+@mixin text-h2 {
+	font: 400 2.847rem/120% 'Inter', sans-serif;
+	color: $text-color-black;
+}
+@mixin text-h3 {
+	font: 400 2.847rem/150% 'Kurale', sans-serif;
+	color: $text-color-green;
+}
+@mixin text-h4 {
+	font: 500 1.7794rem/120% 'Inter', sans-serif;
+	color: $text-color-black;
+}
+@mixin text-h5 {
+	font: 400 1.4235rem/150% 'Kurale', sans-serif;
+	text-transform: uppercase;
+	color: $text-color-green;
+}
+@mixin text-h6 {
+	font: 400 1.4235rem/150% 'Kurale', sans-serif;
+	color: $text-color-green;
+}
+@mixin text-h7 {
+	font: 400 1.0676rem/115% 'Inter', sans-serif;
+	text-transform: uppercase;
+	color: $text-color-black;
+}
+@mixin text-h8 {
+	font: 500 1.0676rem/115% 'Inter', sans-serif;
+	color: $text-color-black;
+}
+@mixin text-h9 {
+	font: 400 1.0676rem/115% 'Inter', sans-serif;
+	color: $text-color-black;
+}
+@mixin text-h10 {
+	font: 400 0.8897rem/120% 'Inter', sans-serif;
+	color: $text-color-black;
+}
+@mixin text-h11 {
+	font: 500 1.4235rem/120% 'Inter', sans-serif;
+	color: $text-color-black;
+}
+
+
+html {
+	// !!!!!! File > Preferences > Settings => cssrem.rootFontSize => fontsize : 16
+	font-size: 22.48px;
+	font-size: 16px;
+}
+
+.hide {
+	display: none !important;
+}
