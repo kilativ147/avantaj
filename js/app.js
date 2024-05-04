@@ -2,4 +2,6 @@
 // import * as flsFunctions from "./modules/functions.js";
 // flsFunctions.isWebP();
 
-import "./modules/swiper.js"
+import './modules/swiper.js'
+
+import './modules/burger.js'
