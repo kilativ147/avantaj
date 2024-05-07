@@ -207,15 +207,9 @@ body {
 		flex: 0 0 3.2rem;
 		display: none;
 	}
-	@media (width < $screen1024) {
+	@media (width <= $screen1024) {
 		&::before {
-			content: '';
-			position: fixed;
-			top: 0;
-			left: 0;
 			z-index: 0;
-			width: 100%;
-			height: clamp(82px, 10vw, 102px);
 			background: #fff;
 		}
 		&__container {
@@ -338,20 +332,21 @@ body {
 }
 .media {
 	margin-top: 1.7794rem;
-	max-width: calc(4.4484rem * 5);
+	max-width: calc(4rem * 5);
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 
 	&__link {
+		flex-grow: 1;
 		display: block;
-		height: 3.3363rem;
+		height: 3.5rem;
 		aspect-ratio: 1;
 		transition: all 0.2s ease;
 		img {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			object-fit: contain;
 			transition: all 0.2s ease;
 		}
 		&:not(:hover) {
@@ -533,26 +528,35 @@ body {
 .hero {
 	position: relative;
 	margin: 0 auto;
-	margin-bottom: 109.9991px;
 	max-width: $container_maxWidth;
-	&::before {
-		// content: '';
-		position: absolute;
-		bottom: -8.331rem;
-		right: -10rem;
-		// translate: -30vw 0%;
-		outline: 15.0009px solid $main-color-white;
-		border: 2.0007px solid #319e3c;
-		border-radius: 50%;
-		width: clamp(500.0002px, 70vw, 750.0002px);
-		// max-width: 33.363rem;
-		aspect-ratio: 1;
-		background: url('@img/map.webp') center / 100% no-repeat;
+	&__container {
+		position: relative;
+		padding-bottom: 110px;
+		&::before {
+			content: '';
+			position: absolute;
+			right: -11rem;
+			bottom: 0;
+			outline: 15.0009px solid $main-color-white;
+			border: 2.0007px solid #319e3c;
+			border-radius: 50%;
+			width: clamp(15rem, 60vw, 33.363rem);
+			aspect-ratio: 1;
+			background: url('@img/map.webp') center / cover no-repeat;
+			@media (width <= $screen768) {
+				right: -7rem;
+				bottom: 4rem;
+			}
+			@media (width <= 430px) {
+				right: -5rem;
+				bottom: 7rem;
+				width: clamp(10rem, 55vw, 15rem);
+			}
+		}
 	}
 	&__background {
 		position: relative;
-		min-height: 900.0003px;
-		height: 1022.3994px;
+		height: clamp(32rem, 90vw, 46rem);
 		&::before {
 			content: '';
 			position: absolute;
@@ -567,6 +571,7 @@ body {
 	}
 	&__content {
 		padding: 0.6673rem 2.669rem 1.7794rem;
+		padding: 0.6rem clamp(1rem, 4vw, 2.67rem) clamp(1rem, 4vw, 1.78rem);
 		max-width: 57.8292rem;
 		height: 100%;
 		display: flex;
@@ -577,13 +582,16 @@ body {
 	}
 	&__title {
 		@include text-h1;
+		font-size: clamp(2.2rem, 7vw, 4.9rem);
+		line-height: clamp(120%, 10vw, 150%);
 		text-shadow: 0px 1px 1px #555;
+		margin-bottom: 12px;
 	}
 
 	&__subtitle {
 		@include text-h8;
 		position: relative;
-		margin-bottom: 59.9991px;
+		margin-bottom: clamp(1.5rem, 5vw, 2.6rem);
 		padding: 0.8897rem 1.3345rem;
 		max-width: 33.274rem;
 		color: $text-color-white;
@@ -607,16 +615,26 @@ body {
 	}
 
 	&__stats {
+		margin-top: 0px;
 		border: 1.0004px solid rgba(252, 252, 252, 0.6);
-		border-radius: 50px;
-		padding: 2.0018rem;
-		width: clamp(9.9991px, 60vw, 47.3754rem);
+		border-radius: clamp(25px, 4vw, 50px);
+		padding: clamp(0.75rem, 3vw, 2rem);
+		width: fit-content;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
-		backdrop-filter: blur(0.089rem);
+		backdrop-filter: blur(2px);
 		background: rgba(252, 252, 252, 0.4);
+
+		@media (width <= $screen1280) {
+			width: clamp(9.9991rem, calc(60vw - 120px), 47.3754rem);
+		}
+		@media (width <= $screen1024) {
+			width: fit-content;
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
 
 	&__stat-item {
@@ -625,24 +643,30 @@ body {
 		align-items: center;
 		justify-content: center;
 		column-gap: 0.8897rem;
+		font-size: clamp(0.55rem, 2vw, 1rem);
+		text-shadow: 0 0 5px #00000046;
 	}
 
 	&__stat-number {
 		@include text-h2;
+		font-size: 2.847em;
 		color: $text-color-white;
 	}
 
 	&__stat-description {
 		@include text-h9;
+		font-size: 1.0676em;
 		text-wrap: wrap;
 		color: $text-color-white;
 	}
 
 	&__media {
 		margin-inline: 0;
+		@media (width <= $screen768) {
+			max-width: calc(4.4484rem * 2.75);
+		}
 	}
 }
-
 .about {
 	margin-bottom: 150px;
 
