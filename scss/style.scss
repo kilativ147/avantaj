@@ -462,10 +462,10 @@ body {
 		position: relative;
 		z-index: 1;
 		// margin: 70.0005px 140.0009px;
-		margin: 70.0005px auto;
+		margin: 70.0005px 50px;
 		border-radius: 40.0009px;
 		padding: 54.9996px 45.0005px 75px;
-		max-width: 600.0002px;
+		max-width: 26.6904rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -694,7 +694,6 @@ body {
 	}
 	&__description {
 		flex: 1 1 18.9057rem;
-		// max-width: 725.0002px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -703,19 +702,19 @@ body {
 		position: relative;
 		margin-right: 2.2242rem;
 		&::before {
-			display: flex;
+			// display: flex;
 			@include text-h6;
 			content: 'Odessa delivery';
 			position: absolute;
-			top: 89.92px;
-			right: -141.624px;
+			top: 4rem;
+			right: -6.3rem;
 			rotate: -90deg;
 		}
 	}
 	&__paragrahp {
 		@include text-h9;
 		line-height: 120.833333%; /* 29/24 */
-		margin-bottom: 70.0005px;
+		margin-bottom: 3.1139rem;
 		text-wrap: pretty;
 	}
 	&__button {
@@ -751,34 +750,34 @@ body {
 
 	&__list {
 		margin: 0 auto;
+		padding-inline: 50px;
 		width: 100%;
-		display: flex;
-		justify-content: center;
-		column-gap: 1.3345rem;
-		// overflow-x: auto;
+		overflow-x: auto;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(220px, 1fr));
+		column-gap: 1.75rem;
 	}
 
 	&__item {
 		flex: 1 0 350.0001px;
 		border-radius: 30.0018px;
-		padding: 25px 17.9997px;
-		max-width: 15.7918rem;
-		background: $main-color-white;
+		padding: 1.1rem 0.8rem;
+		background: #f5f5f5;
 	}
 
 	&__service-name {
 		@include text-h6;
 		margin-bottom: 9.9991px;
-		max-width: 62%;
+		// max-width: 65%;
 		text-transform: uppercase;
 	}
 
 	&__service-image {
 		display: block;
-		margin: 0 auto 59.9991px;
-		border-radius: 20.0005px;
-		width: 220.0005px;
-		height: 180.0019px;
+		margin: 0 auto 2.669rem;
+		border-radius: 0.8897rem;
+		width: 9.7865rem;
+		height: 8.0072rem;
 		object-fit: cover;
 		object-position: center 30%;
 	}
@@ -813,15 +812,15 @@ body {
 	&__content {
 		border-radius: 1.7794rem;
 		background: url('@img/hero.webp') center / cover;
-		display: flex;
-		// align-items: center;
-		// column-gap: 50px;
-		flex-wrap: wrap-reverse;
+		// display: flex;
+		// flex-wrap: wrap-reverse;
 		overflow: hidden;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
 	}
 
 	&__feedback {
-		flex: 1 0 550.0002px;
+		// flex: 1 0 20rem;
 		position: relative;
 		z-index: 1;
 		&::before {
@@ -841,8 +840,10 @@ body {
 	&__form {
 	}
 	&__contacts {
-		flex: 1 0 550.0002px;
-		padding: 0 50px;
+		// flex: 1 0 20rem;
+		display: flex;
+		justify-content: center;
+		// padding: 0 auto;
 	}
 }
 .cars {
@@ -948,5 +949,191 @@ body {
 			background: $button-color-active;
 			scale: 0.9;
 		}
+	}
+}
+
+.footer {
+	width: 100%;
+	background: $main-color-green;
+	span,
+	p,
+	a,
+	h3 {
+		color: $text-color-white;
+	}
+	&__container {
+	}
+
+	&__content {
+		padding: 60px 0;
+		display: flex;
+		align-items: start;
+		flex-wrap: wrap;
+		gap: 2.3rem;
+	}
+
+	&__logo {
+		margin-right: auto;
+		p {
+			border-color: $text-color-white;
+		}
+	}
+
+	&__nav {
+		@include text-h9;
+		display: flex;
+		flex-direction: column;
+		row-gap: 1.35rem;
+	}
+
+	&__item {
+	}
+	
+	&__nav-link {
+		@media (hover) {
+			&:hover {
+				color: $text-color-footer-hover;
+			}
+		}
+		&:focus-visible {
+			color: $text-color-footer-hover;
+		}
+		&:active {
+			color: $text-color-footer-active;
+		}
+	}
+
+	&__contact {
+		@include text-h9;
+		border-inline: 1px solid $main-color-white;
+		padding-inline: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.6rem;
+	}
+
+	&__contact-address {
+	}
+
+	&__contact-phone {
+		line-height: 300%;
+		@media (hover) {
+			&:hover {
+				color: $text-color-footer-hover;
+			}
+		}
+		&:focus-visible {
+			color: $text-color-footer-hover;
+		}
+		&:active {
+			color: $text-color-footer-active;
+		}
+	}
+
+	&__contact-email {
+		line-height: 200%;
+		@media (hover) {
+			&:hover {
+				color: $text-color-footer-hover;
+			}
+		}
+		&:focus-visible {
+			color: $text-color-footer-hover;
+		}
+		&:active {
+			color: $text-color-footer-active;
+		}
+	}
+
+	&__schedule {
+		@include text-h9;
+	}
+
+	&__schedule-text {
+		&:not(:first-child) {
+			line-height: 350%;
+		}
+	}
+
+	&__media {
+		margin-right: 7px;
+		// max-width: calc(4rem * 2);
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 1.3rem;
+	}
+	&__media-column {
+		display: flex;
+		flex-direction: column;
+		gap: 1.3rem;
+	}
+	&__media-link {
+		height: 2.5rem;
+		aspect-ratio: 1;
+		background: $main-color-white;
+		transition: background 0.2s ease, scale 0.2s ease;
+
+		&._vb {
+			mask-image: url('@img/icons/icons.svg#vb');
+		}
+		&._tg {
+			mask-image: url('@img/icons/icons.svg#tg');
+		}
+		&._wu {
+			mask-image: url('@img/icons/icons.svg#wu');
+		}
+		&._fb {
+			mask-image: url('@img/icons/icons.svg#fb');
+		}
+		&._inst {
+			mask-image: url('@img/icons/icons.svg#inst');
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+		}
+
+		@media (hover) {
+			&:hover {
+				background: #ffffff4d;
+				background: transparent;
+				img {
+					opacity: 0.5;
+				}
+			}
+		}
+		&:focus-visible {
+			background: #ffffff4d;
+			img {
+				opacity: 0.5;
+			}
+		}
+		&:active {
+			scale: 1.3;
+			background: #ffffff0c;
+			pointer-events: none;
+			img {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__authors {
+		padding-bottom: 30px;
+		text-align: left;
+	}
+
+	&__author {
+		font-weight: 600;
+		text-decoration: underline;
+	}
+	@media (width <= $screen1280){
+	&__content {
+		
+	}
 	}
 }
