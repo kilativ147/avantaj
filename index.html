@@ -5,9 +5,9 @@
 	@@include('html/head.html',{ "title":"Avantaj - Вантажні перевезення" })
 	<body>
 		<div class="wrapper">
-			@@include('html/header.html',{})
+			<!-- @@include('html/header.html',{}) -->
 			<main class="main">
-				<section id="hero" class="hero">
+				<section id="hero" class="hide hero">
 					<div class="hero__container">
 						<article class="hero__background">
 							<div class="hero__content">
@@ -56,7 +56,7 @@
 						</article>
 					</div>
 				</section>
-				<section id="about" class="about about__container">
+				<section id="about" class="hide about about__container">
 					<h2 class="about__title">Про нас</h2>
 					<div class="about__content">
 						<div class="about__image"></div>
@@ -80,7 +80,7 @@
 						</div>
 					</div>
 				</section>
-				<section id="services" class="services services__container">
+				<section id="services" class="hide services services__container">
 					<h2 class="services__title">Послуги</h2>
 					<div class="services__content">
 						<ul class="services__list">
@@ -191,18 +191,12 @@
 									<a href="#!" class="media__link">
 										<img src="@img/icons/icons.svg#wu-active" alt="Whatsup" />
 									</a>
-									<!-- <a href="#!" class="media__link">
-										<img src="@img/icons/icons.svg#fb-active" alt="Facebook" />
-									</a>
-									<a href="#!" class="media__link">
-										<img src="@img/icons/icons.svg#inst-active" alt="Instagram" />
-									</a> -->
 								</article>
 							</div>
 						</article>
 					</div>
 				</section>
-				<section id="cars" class="cars cars__container">
+				<section id="cars" class="hide cars cars__container">
 					<div class="cars__text">
 						<h2 class="cars__title">Наші вантажівки</h2>
 						<p class="cars__description">
@@ -243,7 +237,7 @@
 					</article>
 				</section>
 			</main>
-			@@include('html/footer.html',{})
+			<!-- @@include('html/footer.html',{}) -->
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 		<script src="js/app.min.js"></script>

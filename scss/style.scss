@@ -412,20 +412,20 @@ body {
 
 .form {
 	margin: 0 auto;
-	padding: 140.0009px 45.0005px 159.9992px;
+	padding: 6.2278rem 2.0018rem 7.1174rem;
+	max-width: 24.4662rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	max-width: 550.0002px;
 	&__title {
 		@include text-h4;
-		margin-bottom: 26.0004px;
+		margin-bottom: 1.1566rem;
 	}
 
 	&__subtitle {
 		@include text-h10;
-		margin-bottom: 40.0009px;
+		margin-bottom: 1.7794rem;
 		min-width: 100%;
 		font-size: 20px;
 		text-align: center;
@@ -438,6 +438,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		font-size: 23.9996px;
+		font-size: clamp(1rem, 6.5vw, 1.4rem);
 		&-name {
 			display: inline-block;
 			margin-bottom: 3.9992px;
@@ -447,6 +448,7 @@ body {
 	&__input {
 		border: 0.089rem solid #2d342f;
 		border-radius: 50px;
+		width: 100%;
 		padding: 17.9997px 17.9997px 11.9998px;
 		// backdrop-filter: blur(.1779rem);
 		background: rgba(252, 252, 252, 0.5);
@@ -495,7 +497,7 @@ body {
 
 	&__phone {
 		position: relative;
-		padding: 0 59.9991px;
+		padding: 0 2.6rem;
 		border-bottom: 0.0445rem solid #333;
 		&::before {
 			content: '';
@@ -523,6 +525,17 @@ body {
 
 	&__media {
 		width: 100%;
+	}
+	@media (width <= $screen768) {
+		&__list {
+			margin: 70px auto;
+			padding: 55px clamp(1.75rem, 9vw, 3rem) 75px;
+			font-size: clamp(1rem, 6.5vw, 1.4rem);
+		}
+		&__phone {
+			position: relative;
+			padding: 0 clamp(2.1rem, 8vw, 3rem);
+		}
 	}
 }
 
@@ -818,18 +831,16 @@ body {
 		// flex-wrap: wrap-reverse;
 		overflow: hidden;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+		grid-template-columns: repeat(auto-fit, 50%);
 	}
 
 	&__feedback {
-		// flex: 1 0 20rem;
 		position: relative;
 		z-index: 1;
 		&::before {
 			content: '';
 			position: absolute;
-			top: 0;
-			left: 0;
+			inset: 0;
 			z-index: -1;
 			width: 100%;
 			height: 100%;
@@ -842,10 +853,14 @@ body {
 	&__form {
 	}
 	&__contacts {
-		// flex: 1 0 20rem;
+		min-width: 20rem;
 		display: flex;
 		justify-content: center;
-		// padding: 0 auto;
+	}
+	@media (width <= $screen1024) {
+		&__content {
+			grid-template-columns: 1fr;
+		}
 	}
 }
 .cars {
@@ -1209,14 +1224,15 @@ body {
 	}
 	@media (width <= 500px) {
 		P,
-		a,h3 {
+		a,
+		h3 {
 			font-size: clamp(0.75rem, 5vw, 1.25rem);
 			&:not(.logo) {
 				font-size: clamp(0.75rem, 6.8vw, 1.1rem);
 				// font-size: 18px;
 			}
 		}
-		&__logo{
+		&__logo {
 		}
 		&__content {
 			padding-bottom: 50px;
@@ -1230,42 +1246,40 @@ body {
 				background: $main-color-white;
 			}
 		}
-		&__nav{
+		&__nav {
 			display: block;
 			columns: 2;
-			&-item{
+			&-item {
 				margin-bottom: 0.5rem;
 			}
-			&-link{
+			&-link {
 				padding: 10px 10px;
 				width: fit-content;
 				display: inline-block;
 				// width: 100%;
-
 			}
 		}
 		&__contact {
-		&-address {
-		}
-		&-phone {
-			line-height: 200%;
-		}
-		&-email {
-			line-height: 150%;
-		}
-	}
-	&__schedule {
-		&-text {
-			&:first-child {
-				// line-height: 250%;
-				margin-bottom: 1rem;
-
+			&-address {
 			}
-			&:not(:first-child) {
+			&-phone {
+				line-height: 200%;
+			}
+			&-email {
 				line-height: 150%;
 			}
 		}
-	}
+		&__schedule {
+			&-text {
+				&:first-child {
+					// line-height: 250%;
+					margin-bottom: 1rem;
+				}
+				&:not(:first-child) {
+					line-height: 150%;
+				}
+			}
+		}
 		&__media {
 			margin: 0;
 			flex-direction: row;
