@@ -3,5 +3,6 @@
 // flsFunctions.isWebP();
 
 import './modules/swiper.js'
-
 import './modules/burger.js'
+import './modules/form.js'
+
