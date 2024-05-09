@@ -56,7 +56,6 @@ body {
 .button1 {
 	border-radius: 2.2242rem;
 	height: 100%;
-	// width: 12.8968rem;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -201,8 +200,8 @@ body {
 	}
 	&__button {
 		flex: 0 1 auto;
-		padding: 0 clamp(0.5rem, 3vw, 1rem);
-		font-size: clamp(0.6rem, 2.25vw, 1.06rem);
+		padding: 0 clamp(0.5rem, 2.5vw, 1rem);
+		font-size: clamp(0.6rem, 2.6vw, 1.2rem);
 	}
 	&__burger {
 		flex: 0 0 3.2rem;
@@ -706,10 +705,10 @@ body {
 		&::before {
 			// display: flex;
 			@include text-h6;
-			content: 'Odessa delivery';
+			content: 'Odesa delivery';
 			position: absolute;
 			top: 4rem;
-			right: -6.3rem;
+			right: -6rem;
 			rotate: -90deg;
 		}
 	}
@@ -717,6 +716,7 @@ body {
 		@include text-h9;
 		line-height: 120.833333%; /* 29/24 */
 		margin-bottom: 3.1139rem;
+		text-align: justify;
 		text-wrap: pretty;
 	}
 	&__button {
@@ -872,10 +872,10 @@ body {
 	&__description {
 		@include text-h9;
 		flex: 1 1 50%;
-		max-width: clamp(17.121rem, 60vw, 30.5694rem);
+		max-width: clamp(16rem, 60vw, 30.5694rem);
 		margin-left: auto;
 		font-size: clamp(0.9rem, 4vw, 1.5rem);
-		text-align: right;
+		text-align: justify;
 		text-wrap: balance;
 	}
 
@@ -1209,11 +1209,11 @@ body {
 	}
 	@media (width <= 500px) {
 		P,
-		a {
+		a,h3 {
 			font-size: clamp(0.75rem, 5vw, 1.25rem);
 			&:not(.logo) {
-				font-size: clamp(0.75rem, 6.8vw, 1.5rem);
-				// font-size: 1.5rem;
+				font-size: clamp(0.75rem, 6.8vw, 1.1rem);
+				// font-size: 18px;
 			}
 		}
 		&__logo{
@@ -1234,7 +1234,7 @@ body {
 			display: block;
 			columns: 2;
 			&-item{
-				margin-bottom: 3rem;
+				margin-bottom: 0.5rem;
 			}
 			&-link{
 				padding: 10px 10px;
@@ -1244,14 +1244,32 @@ body {
 
 			}
 		}
-		&__contact{
-			// display: grid;
-			// grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-			// place-items: center;
+		&__contact {
+		&-address {
 		}
+		&-phone {
+			line-height: 200%;
+		}
+		&-email {
+			line-height: 150%;
+		}
+	}
+	&__schedule {
+		&-text {
+			&:first-child {
+				// line-height: 250%;
+				margin-bottom: 1rem;
+
+			}
+			&:not(:first-child) {
+				line-height: 150%;
+			}
+		}
+	}
 		&__media {
-			margin: 0 auto;
+			margin: 0;
 			flex-direction: row;
+			justify-content: start;
 			$size: clamp(1rem, 10vw, 2.5rem);
 			gap: $size;
 			&-column {
