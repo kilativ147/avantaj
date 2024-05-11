@@ -190,7 +190,21 @@ body {
 		display: none;
 	}
 
-	&__developer {
+	&__author {
+		background-image: linear-gradient(90deg, green, lime);
+		background-position: left bottom;
+		background-size: 0% 2px;
+		background-repeat: no-repeat;
+		transition: all 0.3s ease;
+		@media (hover) {
+			&:hover {
+				background-size: 100% 2px;
+			}
+		}
+		&:focus-visible,
+		&:active {
+			background-size: 100% 2px;
+		}
 	}
 
 	&__buttons {
@@ -279,11 +293,11 @@ body {
 			padding-block: 100px 20px;
 			display: block;
 			text-align: center;
-			font-size: 1.25rem;
+			font-size: clamp(1.1rem, 5vw, 1.25rem);
 			line-height: 150%;
 		}
 		&__author {
-			text-decoration: underline;
+			// text-decoration: underline;
 			color: $text-color-black;
 		}
 		&__button {
@@ -341,7 +355,7 @@ body {
 	&__link {
 		flex-grow: 1;
 		display: block;
-		height: 3.5rem;
+		height: clamp(2.5rem, 8vw, 3.5rem);
 		aspect-ratio: 1;
 		transition: all 0.2s ease;
 		img {
@@ -606,23 +620,14 @@ body {
 		@include text-h8;
 		position: relative;
 		margin-bottom: clamp(1.5rem, 5vw, 2.6rem);
+		border: 1px solid rgba(252, 252, 252, 0.5);
+		border-radius: clamp(1.4rem, 5vw, 2.3rem);
 		padding: 0.8897rem 1.3345rem;
 		max-width: 33.274rem;
 		color: $text-color-white;
 		text-shadow: 0rem 0rem 0.4448rem #888;
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -1;
-			width: 100%;
-			height: 100%;
-			border: 1.0004px solid rgba(252, 252, 252, 0.5);
-			border-radius: 50px;
-			backdrop-filter: blur(0.4448rem);
-			background: rgba(252, 252, 252, 0.5);
-		}
+		background: rgba(252, 252, 252, 0.1);
+		backdrop-filter: blur(0.3rem);
 	}
 
 	&__button {
@@ -633,17 +638,15 @@ body {
 		border: 1.0004px solid rgba(252, 252, 252, 0.6);
 		border-radius: clamp(25px, 4vw, 50px);
 		padding: clamp(0.75rem, 3vw, 2rem);
-		width: fit-content;
+		width: clamp(10rem, calc(60vw - 120px), 48rem);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
-		backdrop-filter: blur(2px);
-		background: rgba(252, 252, 252, 0.4);
-
-		@media (width <= $screen1280) {
-			width: clamp(9.9991rem, calc(60vw - 120px), 47.3754rem);
-		}
+		backdrop-filter: blur(10px);
+		background: rgba(218, 218, 218, 0.7);
+		column-gap: 1rem;
+		row-gap: 1rem;
 		@media (width <= $screen1024) {
 			width: fit-content;
 			flex-direction: column;
@@ -656,9 +659,12 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		column-gap: 0.8897rem;
+		column-gap: 0.3rem;
 		font-size: clamp(0.55rem, 2vw, 1rem);
 		text-shadow: 0 0 5px #00000046;
+		@media (width <= $screen1024) {
+			flex-direction: column;
+		}
 	}
 
 	&__stat-number {
@@ -669,16 +675,20 @@ body {
 
 	&__stat-description {
 		@include text-h9;
+		display: inline-block;
+		display: flex;
+		flex-direction: column;
 		font-size: 1.0676em;
-		text-wrap: wrap;
 		color: $text-color-white;
+		@media (width <= $screen1024) {
+			flex-direction: row;
+		}
 	}
 
 	&__media {
 		margin-inline: 0;
-		@media (width <= $screen768) {
-			max-width: calc(4.4484rem * 2.75);
-		}
+		max-width: fit-content;
+		gap: clamp(1rem, 5vw, 2rem);
 	}
 }
 .about {
@@ -1136,7 +1146,20 @@ body {
 
 	&__author {
 		font-weight: 600;
-		text-decoration: underline;
+		background-image: linear-gradient(90deg, white, lime, white);
+		background-position: left bottom;
+		background-size: 0% 2px;
+		background-repeat: no-repeat;
+		transition: all 0.3s ease;
+		@media (hover) {
+			&:hover {
+				background-size: 100% 2px;
+			}
+		}
+		&:focus-visible,
+		&:active {
+			background-size: 100% 2px;
+		}
 	}
 	@media (width <= $screen1280) {
 		P,
@@ -1185,6 +1208,7 @@ body {
 
 		&__media {
 			grid-area: m;
+			margin-left: 5px;
 			flex-direction: row;
 			&-column {
 				flex-direction: row;
@@ -1215,6 +1239,7 @@ body {
 			align-items: start;
 		}
 		&__media {
+			margin-top: 5px;
 			flex-direction: row-reverse;
 
 			&-column {
@@ -1281,7 +1306,7 @@ body {
 			}
 		}
 		&__media {
-			margin: 0;
+			margin: 0 5px;
 			flex-direction: row;
 			justify-content: start;
 			$size: clamp(1rem, 10vw, 2.5rem);

@@ -8,9 +8,9 @@ const form = document.getElementById('form')
 form.addEventListener('submit', (e) => {
 	e.preventDefault()
 
-	let message = `<b>Запит з сайту</b>\n`
-	message += `<b>Ім'я</b>${form.name.value}\n`
-	message += `<b>Номер:</b>${form.phone.value}\n`
+	let message = `⠀\n<b>Новий запит з сайту Avantaj:</b>\n⠀\n`
+	message += `<b>Ім'я: </b>${form.name.value}\n`
+	message += `<b>Номер: </b><a href="">${form.phone.value}</a>\n ⠀`
 
 	axios
 		.post(urlApi, {

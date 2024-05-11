@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="uk">
-	<!-- імпортуємо код з іншого html документу -->
-	<!-- передаємо йому змінну title, яка може бути різною для кожної сторінки -->
 	@@include('html/head.html',{ "title":"Avantaj - Вантажні перевезення" })
 	<body>
 		<div class="wrapper">
 			@@include('html/header.html',{})
 			<main class="main">
-				<section id="hero" class=" hero">
+				<section id="hero" class="hero">
 					<div class="hero__container">
 						<article class="hero__background">
 							<div class="hero__content">
@@ -18,45 +16,48 @@
 										будівництві майбутнього.
 									</p>
 									<button id="btnCall" type="button" class="hero__button button2">
-										Дізнатись вартість
+										Зателефонувати
 									</button>
 								</div>
 								<article class="hero__stats">
-									<p class="hero__stat-item">
+									<div class="hero__stat-item">
 										<spam class="hero__stat-number">10+</spam>
-										<spam class="hero__stat-description">років<br />досвіду</spam>
-									</p>
-									<p class="hero__stat-item">
+										<p class="hero__stat-description">
+											<span>Років</span>
+											<span>досвіду</span>
+										</p>
+									</div>
+									<div class="hero__stat-item">
 										<spam class="hero__stat-number">500+</spam>
-										<spam class="hero__stat-description">Задоволених<br />клієнтів</spam>
-									</p>
-									<p class="hero__stat-item">
+										<p class="hero__stat-description">
+											<span>Задоволених</span>
+											<span>клієнтів</span>
+										</p>
+									</div>
+									<div class="hero__stat-item">
 										<spam class="hero__stat-number">1000+</spam>
-										<spam class="hero__stat-description">Виконаних<br />доставок</spam>
-									</p>
+										<p class="hero__stat-description">
+											<spam>Виконаних</spam>
+											<spam>доставок</spam>
+										</p>
+									</div>
 								</article>
 							</div>
 						</article>
 						<article class="hero__media media__container media">
-							<a href="#!" class="media__link">
-								<img src="@img/icons/icons.svg#vb-active" alt="Viber" />
-							</a>
-							<a href="#!" class="media__link">
-								<img src="@img/icons/icons.svg#tg-active" alt="Telegram" />
-							</a>
-							<a href="#!" class="media__link">
-								<img src="@img/icons/icons.svg#wu-active" alt="Whatsup" />
-							</a>
-							<!-- <a href="#!" class="media__link">
-								<img src="@img/icons/icons.svg#fb-active" alt="Facebook" />
-							</a>
-							<a href="#!" class="media__link">
-								<img src="@img/icons/icons.svg#inst-active" alt="Instagram" />
-							</a> -->
+							<a href="viber://add?number=+380972251506" class="media__link">
+										<img src="@img/icons/icons.svg#vb-active" alt="Viber" />
+									</a>
+									<a href="tg://resolve?domain=Vasa5690754" class="media__link">
+										<img src="@img/icons/icons.svg#tg-active" alt="Telegram" />
+									</a>
+									<a href="whatsapp://send?phone=+380972251506" class="media__link">
+										<img src="@img/icons/icons.svg#wu-active" alt="Whatsup" />
+									</a>
 						</article>
 					</div>
 				</section>
-				<section id="about" class=" about about__container">
+				<section id="about" class="about about__container">
 					<h2 class="about__title">Про нас</h2>
 					<div class="about__content">
 						<div class="about__image"></div>
@@ -80,7 +81,7 @@
 						</div>
 					</div>
 				</section>
-				<section id="services" class=" services services__container">
+				<section id="services" class="services services__container">
 					<h2 class="services__title">Послуги</h2>
 					<div class="services__content">
 						<ul class="services__list">
@@ -153,8 +154,9 @@
 								<label for="inputName" class="form__label">
 									<span class="form__label-name">Ім'я</span>
 									<input
-									required	
-									type="text"
+										required
+										type="text"
+										pattern="[a-zA-Z0-9а-яА-ЯіІїЇєЄ]{4,}"
 										id="inputName"
 										name="name"
 										placeholder="Ваше ім'я"
@@ -164,15 +166,16 @@
 								<label for="inputPhone" class="form__label">
 									<span class="form__label-name">Номер телефону</span>
 									<input
-									required
-										type="number"
+										required
+										type="tel"
+										pattern="[0-9]{7,}"
 										id="inputPhone"
 										name="phone"
 										placeholder="+380..."
 										class="form__input"
 									/>
 								</label>
-								<button type='submit'class="form__button button1">Відправити</button>
+								<button type="submit" class="form__button button1">Відправити</button>
 							</form>
 						</article>
 						<article class="contact__contacts contacts">
@@ -187,7 +190,7 @@
 									<a href="viber://add?number=+380972251506" class="media__link">
 										<img src="@img/icons/icons.svg#vb-active" alt="Viber" />
 									</a>
-									<a href="tg://resolve?domain=1378913185" class="media__link">
+									<a href="tg://resolve?domain=Vasa5690754" class="media__link">
 										<img src="@img/icons/icons.svg#tg-active" alt="Telegram" />
 									</a>
 									<a href="whatsapp://send?phone=+380972251506" class="media__link">
@@ -198,7 +201,7 @@
 						</article>
 					</div>
 				</section>
-				<section id="cars" class=" cars cars__container">
+				<section id="cars" class="cars cars__container">
 					<div class="cars__text">
 						<h2 class="cars__title">Наші вантажівки</h2>
 						<p class="cars__description">
